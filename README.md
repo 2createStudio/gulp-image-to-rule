@@ -36,7 +36,7 @@ gulp.task('lazy-rules', function() {
 
 - The plugin has built-in support for retina images.
 - The CSS selectors are based on name of file e.g `ico-arrow.png => .ico-arrow`.
-- The purpose of this plugin is to be a like preprocessor for the [postcss-sprites](https://github.com/2createStudio/postcss-sprites) plugin.
+- The purpose of this plugin is to be like a preprocessor for the [postcss-sprites](https://github.com/2createStudio/postcss-sprites) plugin.
 
 ## Contributing
 
