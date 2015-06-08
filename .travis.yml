@@ -1,0 +1,23 @@
+language: node_js
+node_js:
+- '0.12'
+sudo: false
+cache:
+  directories:
+  - node_modules
+notifications:
+  email: false
+before_deploy:
+- npm config set spin false --global
+env:
+  global:
+  - secure: oZ/iQ7JcBCvT2qjUoy5v/toKV6+8xm/POG6igZ4tNMxO8NrTSW7S20YVnzLcfU19W9FbWQUFY8JbkPklHbH5gnnT9fknImvBkF4iLNCESb+QY9y9TbcdptTdq9nbLMhCjPIK5hFz3EnI3wjViKODtX4wDOs36ZRVOoDAYrbOUk+PZMzQwKHPgksKO01TY/jb8W5MYJqeMtHsqSZI98DnSy4eu79KjKx2lOjCUcqJMYSDUsnQmlPWGKvowZTH+XUf8CZFzFassO452JcgcHO9ldFGyMDiwUPK4Zy73EE5H0LsqM8R3l2gNt6meEf3vmEspfvA9LMLgSowsvEHjp1yGv7zCKbhuonLa5dQ2YyUmQvpfvTLPuM8js6S0dxFKPClf4sWrAGwUqu714OtvXL3lXQMnVBk2ppXfle6oAXgBlDzaUJeZnzvF5UYBORFTgl4FDhiw385uwksEJjlhUiPmd2ArObJRwv5BprZhlmJAvOecQ3SbBPdC8XebrnoKis3WdoNSdLlyvF19JLMO7KAFThSFQnBWHwI/SECcQ7jxfCgO7X1SYL/2Rd8pO5pVmIoCRzvKXZaOJGyZLKpdPFYU1Llh9ZTGjRc2nzZle1mJrf91TGyN5GQ9tz4L9axeqfr7W7MEpc5iAPTZFLT/+5jqz63I76hQ/yw1ZPRYhIyLhA=
+deploy:
+  provider: npm
+  email: bitbucket.2create@gmail.com
+  skip_cleanup: true
+  api_key:
+    secure: BqOn71XpHURquuWAdXp8IBGLU2jOMJMKOKyU1K76Ck4Vp2lUuvDfWue2W1PMxFhhjQAx86JxRxN7OZDnz+DCNm11IZTN4ozkd5wpZ1+jbExGRlsjPgAygrWAkDlcMq2jIAtaLqCQO0OeCp7JzEpjsuzPQSvryUO4b3M8qHhJB9U9cLZ67PvBHlRhzMtuI8Kiv9mbiPqK6xaeUOwItvU2l/1eJgYBKwYWA9nua0feE7fCDIIv5U77maLmgAJcIv9fIRVKuqkuMR0RrsapuQaL5gYAOCsiYrSGKLQ/y0+ZSHKzV6+XBcLVmx0TO5QBaQhYnwPPku5ZGwx2hlKnKqjpQ6oM2ycpDcwVyrmRSXY1vgIBDgvoIyYvFFyoEAyhyXlYY5emRQqV2XPCR7XQAEPow+xCjXiEa42zEu3h0LD+Z9bRLvP6qYWHED0Xrv3h9MqX99JeOb/M6NhxwBhLGzX9U9tH+VRe95kTUO/M+WmaKdfFCd+38WtGPMJPdAWsEpXuD2hIORqcN5Pw0FfmWzKvrz+DPrsAz+9DHkGJGAZeB4D+CTVvAHG5NlGqZbQWMjqsNrt5bp+zI5JbnlIHL+2eR1k9LnJH+FUP80je4YRvE65ZVa/ltSXKl9X1Xv8cSkwDcG7PnWGwYqvInMGfk8fKqGQDJowFei/saf42UJBjLLU=
+  on:
+    branch: master
+    repo: 2createStudio/gulp-image-to-rule
