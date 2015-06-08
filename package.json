@@ -1,6 +1,6 @@
 {
 	"name": "gulp-image-to-rule",
-	"version": "0.0.0",
+	"version": "0.0.0-semantically-released",
 	"description": "Generate CSS rules from your images.",
 	"main": "lib/index.js",
 	"keywords": [
