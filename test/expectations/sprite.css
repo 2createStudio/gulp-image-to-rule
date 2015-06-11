@@ -1,7 +1,7 @@
-.circle { background: url(../fixtures/circle.png) no-repeat 0 0; width: 25px; height: 25px; }
-.square { background: url(../fixtures/square.png) no-repeat 0 0; width: 25px; height: 25px; }
+.circle { background: url(../fixtures/circle.png) no-repeat 0 0; width: 25px; height: 25px; display: inline-block; vertical-align: middle; font-size: 0; }
+.square { background: url(../fixtures/square.png) no-repeat 0 0; width: 25px; height: 25px; display: inline-block; vertical-align: middle; font-size: 0; }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-	.circle { background: url(../fixtures/circle@2x.png) no-repeat 0 0; width: 25px; height: 25px; background-size: 25px 25px; }
-	.square { background: url(../fixtures/square@2x.png) no-repeat 0 0; width: 25px; height: 25px; background-size: 25px 25px; }
+	.circle { background: url(../fixtures/circle@2x.png) no-repeat 0 0; width: 25px; height: 25px; background-size: 25px 25px; display: inline-block; vertical-align: middle; font-size: 0; }
+	.square { background: url(../fixtures/square@2x.png) no-repeat 0 0; width: 25px; height: 25px; background-size: 25px 25px; display: inline-block; vertical-align: middle; font-size: 0; }
 }

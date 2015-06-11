@@ -1,1 +1,1 @@
-<% _.forEach(images, function(image) { %><%= '.' + image.selector %> { background: url(<%= image.url %>) no-repeat 0 0; width: <%= image.dimensions.width %>px; height: <%= image.dimensions.height %>px; }<%= '\n' %><% }); %>
+<% _.forEach(images, function(image) { %><%= '.' + image.selector %> { background: url(<%= image.url %>) no-repeat 0 0; width: <%= image.dimensions.width %>px; height: <%= image.dimensions.height %>px; display: inline-block; vertical-align: middle; font-size: 0; }<%= '\n' %><% }); %>
