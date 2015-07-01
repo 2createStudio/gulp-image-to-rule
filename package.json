@@ -1,6 +1,6 @@
 {
 	"name": "gulp-image-to-rule",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"description": "Generate CSS rules from your images.",
 	"main": "lib/index.js",
 	"keywords": [
@@ -30,12 +30,9 @@
 	"devDependencies": {
 		"tape": "^4.0.0",
 		"tap-spec": "^3.0.0",
-		"semantic-release": "^3.3.1",
 		"gulp": "^3.9.0"
 	},
 	"scripts": {
-		"test": "node ./test/index.js | ./node_modules/.bin/tap-spec",
-		"prepublish": "semantic-release pre",
-  		"postpublish": "semantic-release post"
+		"test": "node ./test/index.js | ./node_modules/.bin/tap-spec"
 	}
 }
