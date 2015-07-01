@@ -23,7 +23,9 @@ tape('should ignore null files', function(t) {
 
 	gulp
 		.src(path.resolve(fixturesRoot, '*.gif'))
-		.pipe(plugin(path.resolve(buildRoot, './sprite.css')))
+		.pipe(plugin(path.resolve(buildRoot, './sprite.css'), {
+			selectorWithPseudo: '.{base}-{pseudo}, a:{pseudo} .{base}, button:{pseudo} .{base}, .{base}, a.{pseudo} .{base}, button.{pseudo} .{base}, .{base}.{pseudo}'
+		}))
 		.pipe(through.obj(function(file, enc, cb) {
 			t.equal(file.contents.toString().length, 0, 'empty output file');
 			cb(null, file);
@@ -36,7 +38,9 @@ tape('should support buffers', function(t) {
 
 	gulp
 		.src(path.resolve(fixturesRoot, '*.png'))
-		.pipe(plugin(path.resolve(buildRoot, './sprite.css')))
+		.pipe(plugin(path.resolve(buildRoot, './sprite.css'), {
+			selectorWithPseudo: '.{base}-{pseudo}, a:{pseudo} .{base}, button:{pseudo} .{base}, .{base}, a.{pseudo} .{base}, button.{pseudo} .{base}, .{base}.{pseudo}'
+		}))
 		.pipe(through.obj(function(file, enc, cb) {
 			t.equal(file.contents.toString(), expectedCss, 'stylesheet created');
 			cb(null, file);
@@ -49,7 +53,9 @@ tape('should support streams', function(t) {
 
 	gulp
 		.src(path.resolve(fixturesRoot, '*.png'), { buffer: false })
-		.pipe(plugin(path.resolve(buildRoot, './sprite.css')))
+		.pipe(plugin(path.resolve(buildRoot, './sprite.css'), {
+			selectorWithPseudo: '.{base}-{pseudo}, a:{pseudo} .{base}, button:{pseudo} .{base}, .{base}, a.{pseudo} .{base}, button.{pseudo} .{base}, .{base}.{pseudo}'
+		}))
 		.pipe(through.obj(function(file, enc, cb) {
 			t.equal(file.contents.toString(), expectedCss, 'stylesheet created');
 			cb(null, file);

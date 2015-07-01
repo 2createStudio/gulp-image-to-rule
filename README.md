@@ -32,6 +32,19 @@ gulp.task('lazy-rules', function() {
 }
 ```
 
+
+## Options
+
+#### selectorWithPseudo
+
+Type: `String`  
+Default: `null`  
+Example: `.{base}-{pseudo}, a:{pseudo} .{base}, button:{pseudo} .{base}, .{base}, a.{pseudo} .{base}, button.{pseudo} .{base}, .{base}.{pseudo}`  
+Required: `false`
+
+Can define custom selector, when pseudo selector is detected. Pseudo selectors are separated from the selectors by '_' in the image name (e.g. `git-icon_hover`). Use keywords `{base}` and `{pseudo}`, that will be replaced in the output.
+
+
 ## Notes
 
 - The plugin has built-in support for retina images.
