@@ -7,3 +7,4 @@
 	.square { background: url(../fixtures/square@2x.png) no-repeat 0 0; width: 25px; height: 25px; background-size: 25px 25px; display: inline-block; vertical-align: middle; font-size: 0; }
 	.square-hover, a:hover .square, button:hover .square, .square, a.hover .square, button.hover .square, .square.hover { background: url(../fixtures/square_hover@2x.png) no-repeat 0 0; width: 25px; height: 25px; background-size: 25px 25px; display: inline-block; vertical-align: middle; font-size: 0; }
 }
+
