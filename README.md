@@ -37,9 +37,9 @@ gulp.task('lazy-rules', function() {
 
 #### selectorWithPseudo
 
-Type: `String`
-Default: `null`
-Example: `.{base}-{pseudo}, a:{pseudo} .{base}, button:{pseudo} .{base}, .{base}, a.{pseudo} .{base}, button.{pseudo} .{base}, .{base}.{pseudo}`
+Type: `String`  
+Default: `null`  
+Example: `.{base}-{pseudo}, a:{pseudo} .{base}, button:{pseudo} .{base}, .{base}, a.{pseudo} .{base}, button.{pseudo} .{base}, .{base}.{pseudo}`  
 Required: `false`
 
 Can define custom selector, when pseudo selector is detected. Pseudo selectors are separated from the selectors by '_' in the image name (e.g. `git-icon_hover`). Use keywords `{base}` and `{pseudo}`, that will be replaced in the output.
@@ -47,12 +47,12 @@ Can define custom selector, when pseudo selector is detected. Pseudo selectors a
 
 #### templates
 
-Type: `Object`
-Default: `null`
+Type: `Object`  
+Default: `null`  
 Example: `{
 	REGULAR: '<% _.forEach(images, function(image) { %><%= image.selector %> { background: url(<%= image.url %>) no-repeat 0 0; width: <%= image.dimensions.width %>px; height: <%= image.dimensions.height %>px; display: inline-block; vertical-align: middle; font-size: 0; }<%= \'\\n\' %><% }); %>',
 	RETINA: '@media (-webkit-min-device-pixel-ratio: <%= ratio %>), (min-resolution: <%= dpi %>dpi) {<% _.forEach(images, function(image) { %><%= \'\\n\\t\' + image.selector %> { background: url(<%= image.url %>) no-repeat 0 0; width: <%= image.dimensions.width / image.ratio %>px; height: <%= image.dimensions.height / image.ratio %>px; background-size: <%= image.dimensions.width / image.ratio %>px <%= image.dimensions.height / image.ratio %>px; display: inline-block; vertical-align: middle; font-size: 0; }<% }); %>}'
-}`
+}`  
 Required: `false`
 
 Can define custom templates for regular and retina css output using lodash templates.
